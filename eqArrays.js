@@ -1,5 +1,3 @@
-const a = [1,2,3], b = [1,2,3];
-
 const assertEqual = function(actual, expected) {
   const equal = '😀 ' + ' Assertion Passed:';
   const notEqual = '😞 ' + ' Assertion Failed:';
@@ -12,21 +10,14 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArray = function(actual,expected) {
-  let count = 0;
-  if (actual.length === expected.length) {
-    actual.forEach((item, ind)=>{
-      if (item === expected[ind]) {
-        count++;
-      }
-    });
-    if (expected.length === count) {
-      return true;
-    } else {
-      return false;
+  let equal = true;
+  if (actual.length !== expected.length) equal = false;
+  actual.forEach((item, ind)=>{
+    if (item !== expected[ind]) {
+      equal = false;
     }
-  } else {
-    return false;
-  }
+  });
+  return equal;
 };
 console.log(assertEqual(eqArray([1, 2, 3], [1, 2, 3]), true));
 console.log(assertEqual(eqArray([1, 2, 3], [3, 2, 1]), true));
