@@ -9,6 +9,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual('Lighouse Labs', 'bootcamp');
+//assertEqual('Lighouse Labs', 'bootcamp');
 
-assertEqual(1, 1);
+//assertEqual(1, 1);
+
+module.exports = assertEqual;

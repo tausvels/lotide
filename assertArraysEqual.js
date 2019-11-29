@@ -22,6 +22,8 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const a = [1,2,3], b = [1,2,3];
+//const a = [1,2,3], b = [1,2,3];
 
-assertArraysEqual(a, b);
+//assertArraysEqual(a, b);
+
+module.exports = assertArraysEqual;
