@@ -1,6 +1,8 @@
-const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
 const tail = require("../tail");
 
-assertEqual(tail([1,2,3]).length, 2);
-
-assertEqual(tail([1,2,3,4,5]).length, 4);
+describe("#tail", ()=>{
+    xit("Returns the entire array without the first index", ()=>{
+        assert.deepEqual(tail([1,2,3]), [2,3]);
+    })
+})
