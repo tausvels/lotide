@@ -21,7 +21,7 @@ const eqArray = function(actual,expected) {
     }
   };
 
-  let input = [1, 2, [3, 4], 5, [6]];
+  // let input = [1, 2, [3, 4], 5, [6]];
 
   const flatten = function(arr){
     let output = [];
@@ -37,4 +37,5 @@ const eqArray = function(actual,expected) {
     return output
   }
 
-  console.log(flatten(input))
+  //console.log(flatten(input))
+  module.exports = flatten;

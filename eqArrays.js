@@ -1,15 +1,19 @@
 const assertEqual = require("./assertEqual");
+const flatten = require("./flatten");
 
-const eqArray = function(actual,expected) {
-  let equal = true;
-  if (actual.length !== expected.length) 
-  equal = false;
-  actual.forEach((item, ind)=>{
-    if (item !== expected[ind]) {
-      equal = false;
+const eqArray = function(act, exp) {
+  let state = Boolean;
+  if (act.length !== exp.length) {
+    return false;
+  }
+  act = flatten(act); exp = flatten(exp);
+  for (let i = 0; i < act.length; i++) {
+    if (act[i] !== exp[i]) {
+      return false;
+    } else {
+      state = true;
     }
-  });
-  return equal;
+  }
+  return state;
 };
-
 module.exports = eqArray;
