@@ -10,5 +10,4 @@ function middle(arr){
         return (output)
     }
 }
-console.log(middle([1,2,3]))
 module.exports = middle;
