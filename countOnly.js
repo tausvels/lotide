@@ -1,15 +1,6 @@
-const assertEqual = function(actual, expected) {
-  const equal = '😀 ' + ' Assertion Passed:';
-  const notEqual = '😞 ' + ' Assertion Failed:';
-  
-  if (actual === expected) {
-    console.log(equal + ' ' + [actual] + ' === ' + [expected]);
-  } else {
-    console.log(notEqual + ' ' + [actual] + ' !== ' + [expected]);
-  }
-};
-  
-//assertEqual('Lighouse Labs', 'bootcamp');
+//FUNCTION RETURNS AN OBJECT CONTAINING 'ITEM TO FIND' AS KEY
+// AND THE OCCURANCE OF 'ITEM TO FIND' AS VALUES.
+//const assertEqual = require("./assertEqual");
 
 const firstNames = [
   "Karl",
@@ -38,9 +29,10 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return results;
 };
-const outcome = countOnly(firstNames, itemsToCount);
-console.log(outcome);
+module.exports = countOnly;
+// const outcome = countOnly(firstNames, itemsToCount);
+// console.log(outcome);
 
-assertEqual(outcome["Jason"], 1);
-assertEqual(outcome["Karima"], undefined);
-assertEqual(outcome["Fang"], 2);
+// assertEqual(outcome["Jason"], 1);
+// assertEqual(outcome["Karima"], undefined);
+// assertEqual(outcome["Fang"], 2);

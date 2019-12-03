@@ -1,29 +1,11 @@
-const eqArray = function(actual,expected) {
-  let equal = true;
-  if (actual.length !== expected.length) equal = false;
-  actual.forEach((item, ind)=>{
-    if (item !== expected[ind]) {
-      equal = false;
-    }
-  });
-  return equal;
-};
-  
-const assertArraysEqual = function(arr1, arr2) {
-  if (arr1.length === arr2.length) {
-    let outcome = eqArray(arr1, arr2);
-    if (outcome === true) {
-      console.log('Two arrays are equal');
-    } else {
-      console.log('The arrays are not equal');
-    }
-  } else {
-    console.log('The arrays are not equal');
-  }
-};
+//FUNCTION RETURNS ALL THE POSITIONS OF A PARTICULAR LETTER IN A STRING
+// SYNTAX IS letterPositions(data).yourLetterOfChoice
 
-let data = 'lighthouse in the house';
-let testData = 'hello';
+// const eqArrays = require("./eqArrays")
+// const assertArraysEqual = require("./assertArraysEqual");
+
+// let data = 'lighthouse in the house';
+// let testData = 'hello';
 
 const letterPositions = function(input) {
   const result = {}, temp = input.split('');
@@ -39,5 +21,7 @@ const letterPositions = function(input) {
   });
   return result;
 };
+module.exports = letterPositions;
 
-assertArraysEqual(letterPositions(testData).e, [1]);
+//console.log(assertArraysEqual(letterPositions(testData).e, [1]));
+//console.log(letterPositions(data).i)

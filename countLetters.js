@@ -1,13 +1,5 @@
-const assertEqual = function(actual, expected) {
-  const equal = '😀 ' + ' Assertion Passed:';
-  const notEqual = '😞 ' + ' Assertion Failed:';
-    
-  if (actual === expected) {
-    console.log(equal + ' ' + [actual] + ' === ' + [expected]);
-  } else {
-    console.log(notEqual + ' ' + [actual] + ' !== ' + [expected]);
-  }
-};
+// FUNCTION RETURNS AN OBJECT CONTAINING ALL THE LETTERS
+// WITHIN A STRING AS KEY AND THEIR OCCURANCES AS 'VALUES'
 
 let data = 'lighthouse in the house';
 
@@ -24,4 +16,7 @@ const countLetters = function(input) {
   return result;
 };
 
-let outcome = countLetters(data); console.log(outcome);
+module.exports = countLetters;
+
+// let outcome = countLetters(data); 
+// console.log(outcome);

@@ -1,19 +1,11 @@
-const assertEqual = function(actual, expected) {
-  const equal = '😀 ' + ' Assertion Passed:';
-  const notEqual = '😞 ' + ' Assertion Failed:';
-      
-  if (actual === expected) {
-    console.log(equal + ' ' + [actual] + ' === ' + [expected]);
-  } else {
-    console.log(notEqual + ' ' + [actual] + ' !== ' + [expected]);
-  }
-};
+// FUNCTION RETURNS THE KEY OF AN OBJECT WHEN THE SEC0ND PARAMETER 
+// IS A MATCH WITH THE VALUE IT CONTAINS
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama:  "The Wire"
+// };
 
 const findKeyByValue = function(obj, val) {
   const genre = Object.keys(obj); let output = '';
@@ -24,5 +16,8 @@ const findKeyByValue = function(obj, val) {
     }
   }
 };
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+
+//findKeyByValue(bestTVShowsByGenre, 'The Wire')
+module.exports = findKeyByValue;
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
